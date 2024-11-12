@@ -12,6 +12,18 @@
             android:icon="@mipmap/ic_launcher"
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
-            android:theme="@style/Theme.UTF7IMEForUITesting"/>
+            android:theme="@style/Theme.UTF7IMEForUITesting">
+        <service android:name="jp.jun_nama.test.utf7ime.Utf7ImeService"
+                 android:enabled="true"
+                 android:exported="true" android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod"/>
+            </intent-filter>
+
+            <meta-data
+                    android:name="android.view.im"
+                    android:resource="@xml/method"/>
+        </service>
+    </application>
 
 </manifest>
