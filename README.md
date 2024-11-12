@@ -1,8 +1,9 @@
 # UTF7 IME for UI Testing
-UTF7 IME for UI Testing
+UTF7 IME for UI Testing available up to Android 15
 
 ## About
-This app is a branch of [Utf7Ime which in "Uiautomator Unicode Input Helper"](https://github.com/sumio/uiautomator-unicode-input-helper) with Kotlin DSL build configuration.
+This app is a fork of [Utf7Ime which in "Uiautomator Unicode Input Helper"](https://github.com/sumio/uiautomator-unicode-input-helper)
+and migrate from Eclipse ADT to Android Studio with Gradle use Kotlin DSL build configuration.
 Origin project is hard to build today and not support a new Android version.
 
 ## License
