@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace = "jp.jun_nama.test.utf7ime"
-    compileSdk = 34
+    compileSdkVersion(rootProject.extra["compileSdkVersion"] as Int)
 
     defaultConfig {
-        applicationId = "jp.jun_nama.test.utf7ime"
-        minSdk = 24
-        targetSdk = 34
+        applicationId = rootProject.extra["defaultApplicationId"] as String
+        minSdkVersion(rootProject.extra["defaultMinSdkVersion"] as Int)
+        targetSdkVersion(rootProject.extra["defaultTargetSdkVersion"] as Int)
         versionCode = 1
         versionName = "1.0"
 
@@ -23,8 +23,8 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 }
 
