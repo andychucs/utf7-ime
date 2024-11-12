@@ -16,6 +16,7 @@
 package jp.jun_nama.test.utf7ime;
 
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 import android.annotation.SuppressLint;
 import android.inputmethodservice.InputMethodService;
@@ -170,7 +171,7 @@ public class Utf7ImeService extends InputMethodService {
     }
 
     private String decodeUtf7(String encStr) {
-        byte[] encoded = encStr.getBytes(Charset.forName("US-ASCII"));
+        byte[] encoded = encStr.getBytes(StandardCharsets.US_ASCII);
         return new String(encoded, mModifiedUtf7Charset);
     }
 
